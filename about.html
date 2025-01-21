@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre mí</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <div class="bg"></div>
+        <div class="bg bg2"></div>
+        <div class="bg bg3"></div>
+    
+        <h1>Sobre mí</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="about.html" aria-current="page">Sobre mí</a></li>
+                <li><a href="gallery.html">Galería</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+                <li><a href="video.html">Video</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!--🟢 Sección principal -->
+    <main>
+        <!-- 🟢🟢Acerca de mí -->
+        <section>
+            <h2>¿Quién soy?</h2>
+            <p>Soy un apasionado del diseño web y el desarrollo frontend. Este blog es mi manera de compartir conocimientos y conectar con otras personas mediante los diseños creados en fotografía y video, siempre relacionados con el área militar.</p>
+            
+            <!-- 🟢🟢🟢 Galería de imágenes dinámicas -->
+            <main>
+                <section class="galeria">
+                    <h2>Mi Galería</h2>
+                    <div class="contenedor-galeria">
+                        <!-- Imagen 1 -->
+                        <figure class="elemento-galeria" onclick="mostrarImagen(this)">
+                            <img src="imagenes\about\auto.jpg" alt="Paisaje 1">
+                            <figcaption>CONDUCIR</figcaption>
+                        </figure>
+                        <!-- Imagen 2 -->
+                        <figure class="elemento-galeria" onclick="mostrarImagen(this)">
+                            <img src="imagenes\about\bicicleta.jpg" alt="Paisaje 2">
+                            <figcaption>CICLISMO</figcaption>
+                        </figure>
+                        <!-- Imagen 3 -->
+                        <figure class="elemento-galeria" onclick="mostrarImagen(this)">
+                            <img src="imagenes\about\caminar.jpg" alt="Paisaje 3">
+                            <figcaption>CAMINAR</figcaption>
+                        </figure>
+                        <!-- Imagen 4 -->
+                        <figure class="elemento-galeria" onclick="mostrarImagen(this)">
+                            <img src="imagenes\about\drone.jpg" alt="Paisaje 4">
+                            <figcaption>PILOTAR DRON</figcaption>
+                        </figure>
+                    </div>
+                </section>
+            </main>
+            <!-- 🔴🔴🔴 Galería de imágenes dinámicas -->
+            <!-- Modal para imagen ampliada -->
+            <div id="modal" class="modal">
+                <span class="cerrar" onclick="cerrarModal()">&times;</span>
+                <img class="modal-contenido" id="imagenModal">
+                <div id="caption"></div>
+            </div>
+            <!-- 🔴🔴🔴 Fin galería de imágenes dinámicas -->
+        </section>
+    
+        <!-- Intereses -->
+        <section>
+            <h2>Mis intereses</h2>
+            <ul>
+                <li>Desarrollo web</li>
+                <li>Fotografía</li>
+                <li>Drones</li>
+                <li>Cámaras</li>
+                <li>Programación</li>
+                <li>Diseño gráfico</li>
+                <li>Efectos especiales</li>
+            </ul>
+        </section>
+    </main>
+    
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2024 Mi Blog Personal. Todos los derechos reservados.</p>
+    </footer>
+    <script src="script.js"></script>
+

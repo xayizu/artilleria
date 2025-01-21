@@ -1,0 +1,410 @@
+/* General Styles */
+body {
+  font-family: 'Helvetica', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/*🟢 Header y Footer */
+header, footer {
+  background: linear-gradient(to right, #660000, #000); /* Degradado de rojo a negro */
+  color: #fff; /* Color del texto en blanco */
+  text-align: center; /* Centra el texto */
+  padding: 15px 0; /* Espaciado interno superior e inferior */
+  font-size: 18px; /* Tamaño del texto */
+}
+/*🔴 Header y Footer */
+
+header h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+/*🟢 Estilos al pasar el cursor sobre los enlaces */
+/* Estilos generales para el contenedor del menú de navegación */
+nav ul {
+  list-style: none; /* Elimina los puntos de lista predeterminados */
+  padding: 0; /* Elimina el relleno interno del contenedor */
+  display: flex; /* Coloca los elementos de la lista en línea (horizontales) */
+  justify-content: center; /* Centra los elementos de la lista dentro del contenedor */
+  margin: 0; /* Elimina el margen externo del contenedor */
+}
+
+/* Estilos para cada elemento de la lista dentro del menú */
+nav ul li {
+  margin: 0 20px; /* Añade espacio horizontal (20px a cada lado) entre los elementos de la lista */
+}
+
+
+/* Estilos para los enlaces dentro de los elementos de la lista de navegación */
+nav ul li a {
+  text-decoration: none; /* Elimina el subrayado predeterminado de los enlaces */
+  color: #fff; /* Define el color del texto de los enlaces como blanco */
+  font-size: 16px; /* Establece el tamaño inicial de la fuente en 16px */
+  transition: color 0.3s ease, font-size 0.3s ease; /* Aplica una transición suave para los cambios en color y tamaño */
+}
+
+/* Estilos cuando el usuario pasa el cursor sobre los enlaces */
+nav ul li a:hover {
+  color: #ffcccb; /* Cambia el color del texto a rosa claro cuando el cursor está sobre el enlace */
+  font-size: 1.5em; /* Aumenta el tamaño de la fuente a 1.5 veces el tamaño base (responsivo) */
+}
+
+/*🔴 Estilos al pasar el cursor sobre los enlaces */
+/*🟡*/
+/*🟢 Contenedor del video */
+.video-container {
+  margin: 20px auto; /* Centra horizontalmente el contenedor con márgenes automáticos */
+  width: 100%; /* Ocupa el 100% del ancho disponible del contenedor padre */
+  max-width: 1000px; /* Limita el ancho máximo a 800px para pantallas grandes */
+  aspect-ratio: 16 / 9; /* Mantiene una proporción de aspecto 16:9 (relación estándar para videos) */
+  position: relative; /* Define posición relativa para manejar contenido interno si es necesario */
+}
+
+/* Estilos para el iframe del video */
+.video-container iframe {
+  width: 100%; /* El iframe ocupa el 100% del ancho del contenedor */
+  height: 100%; /* El iframe ocupa el 100% de la altura del contenedor, respetando el aspect-ratio */
+  border-radius: 10px; /* Aplica esquinas redondeadas al iframe */
+  border: none; /* Elimina cualquier borde predeterminado del iframe */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Agrega una sombra alrededor del iframe para darle profundidad */
+}
+/*🔴 Contenedor del video */
+
+/* Buttons */
+.download-button {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #ff0000;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.download-button:hover {
+  background-color: #b30000;
+  transform: scale(1.1);
+}
+
+/*🟢 Animacion de fondo */
+/* Variables CSS para colores y configuraciones de animación */
+:root {
+  --color1: #ffffff; /* Primer color del degradado */
+  --color2: #fd3131; /* Segundo color del degradado */
+  --opacity: 0.5; /* Opacidad de las capas */
+  --duration-bg: 3s; /* Duración predeterminada de la animación */
+  --duration-bg2: 4s; /* Duración de la animación de la capa 2 */
+  --duration-bg3: 5s; /* Duración de la animación de la capa 3 */
+}
+
+/* Estilo base para las capas de fondo */
+.bg {
+  animation: slide var(--duration-bg) ease-in-out infinite alternate; /* Animación */
+  background-image: linear-gradient(-60deg, var(--color1) 50%, var(--color2) 50%); /* Degradado */
+  bottom: 0; /* Fija la capa en la parte inferior */
+  left: -50%; /* Desplaza hacia la izquierda */
+  opacity: var(--opacity); /* Transparencia */
+  position: fixed; /* Posición fija */
+  right: -50%; /* Extiende hacia la derecha */
+  top: 0; /* Fija la capa en la parte superior */
+  z-index: -1; /* Envía la capa al fondo */
+}
+
+/* Personalización de las capas adicionales */
+.bg2 {
+  animation-direction: alternate-reverse; /* Dirección inversa */
+  animation-duration: var(--duration-bg2); /* Duración específica */
+}
+
+.bg3 {
+  animation-duration: var(--duration-bg3); /* Duración específica */
+}
+
+/* Keyframes para la animación de deslizamiento */
+@keyframes slide {
+  0% {
+    transform: translateX(-25%); /* Desplaza hacia la izquierda */
+  }
+  100% {
+    transform: translateX(25%); /* Desplaza hacia la derecha */
+  }
+}
+
+/*🔴 Animacion de fondo */
+
+/* Gallery Container */
+.gallery-container2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  background-color: #db0000;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Gallery Items */
+.gallery-item {
+  text-align: center;
+  background-color: #3a3a3a;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* Highlight Titles */
+a[aria-current="page"] {
+  font-weight: bold;
+  color: #00ffff;
+  text-decoration: underline;
+  font-size: 1.5em;
+
+}
+
+/*🟢 Estilos para el formulario _________________________________________________________________*/
+/* Contenedor principal del formulario */
+.contact-form {
+  max-width: 600px; /* Define un ancho máximo para que el formulario no sea demasiado grande en pantallas grandes */
+  margin: 20px auto; /* Centra el formulario horizontalmente y añade margen superior */
+  padding: 20px; /* Añade espacio interno alrededor del contenido */
+  background-color: #ffffff; /* Fondo blanco para destacar el formulario */
+  border-radius: 10px; /* Bordes redondeados para un diseño más moderno */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Sombra para darle profundidad al formulario */
+  font-family: Arial, sans-serif; /* Asegura una fuente consistente y legible */
+}
+
+/* Estilo para las etiquetas de los campos */
+.contact-form label {
+  display: block; /* Cada etiqueta ocupa toda la línea */
+  margin-bottom: 8px; /* Añade un pequeño espacio debajo de la etiqueta */
+  font-weight: bold; /* Destaca el texto de las etiquetas */
+  color: #333; /* Color oscuro para un buen contraste */
+}
+
+/* Estilo para los campos de entrada y el área de texto */
+.contact-form input,
+.contact-form textarea {
+  width: 100%; /* Los campos ocupan todo el ancho del formulario */
+  padding: 12px; /* Espaciado interno para mayor comodidad al escribir */
+  margin-bottom: 15px; /* Espaciado entre campos */
+  border: 1px solid #ddd; /* Bordes claros y discretos */
+  border-radius: 8px; /* Bordes redondeados para coherencia con el diseño */
+  font-size: 16px; /* Tamaño de fuente cómodo para leer y escribir */
+  box-sizing: border-box; /* Incluye el padding dentro del ancho total */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves al interactuar */
+}
+
+/* Efecto cuando un campo está enfocado */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #ff0000; /* Cambia el color del borde al rojo */
+  outline: none; /* Elimina el borde predeterminado del navegador */
+  box-shadow: 0 0 8px rgba(255, 0, 0, 0.4); /* Sombra roja alrededor del campo enfocado */
+}
+
+/* Botón de envío */
+.contact-form button {
+  width: 100%; /* Ocupa todo el ancho del formulario */
+  padding: 14px; /* Espaciado interno para un botón más cómodo */
+  background-color: #ff0000; /* Color de fondo rojo llamativo */
+  color: #ffffff; /* Texto blanco para un buen contraste */
+  border: none; /* Elimina los bordes predeterminados */
+  border-radius: 8px; /* Bordes redondeados coherentes con el diseño */
+  font-size: 18px; /* Texto más grande para destacar el botón */
+  font-weight: bold; /* Texto en negrita */
+  cursor: pointer; /* Cambia el cursor a una mano para indicar interactividad */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Transiciones suaves en hover y active */
+}
+
+/* Efecto al pasar el cursor sobre el botón */
+.contact-form button:hover {
+  background-color: #b30000; /* Fondo más oscuro al pasar el cursor */
+  transform: translateY(-2px); /* El botón parece elevarse ligeramente */
+}
+
+/* Efecto al presionar el botón */
+.contact-form button:active {
+  background-color: #ff4d4d; /* Cambia a un rojo más claro al hacer clic */
+  transform: translateY(0); /* El botón vuelve a su posición original */
+}
+
+/* Estilo para el área de texto */
+.contact-form textarea {
+  resize: vertical; /* Permite redimensionar solo la altura del área de texto */
+  min-height: 100px; /* Altura mínima para mayor espacio de escritura */
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+  .contact-form {
+    padding: 15px; /* Reduce el padding en dispositivos pequeños */
+  }
+
+  .contact-form button {
+    font-size: 16px; /* Reduce el tamaño de la fuente en el botón */
+  }
+}
+
+/*  🔴 Estilos para el formulario_________________________________________________________________ */
+/*🟡  */
+/*  🟢SECCIÓN MAIN_________________________________________________________________*/
+main {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8); /* Blanco con 50% de transparencia */
+}
+
+
+section {
+  margin-bottom: 30px;
+}
+
+figure {
+  text-align: center;
+  margin: 20px auto;
+}
+
+figure img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+figcaption {
+  font-size: 14px;
+  color: #ffffff;
+  margin-top: 10px;
+}
+/*  🔴SECCIÓN MAIN_________________________________________________________________*/
+/*🟡  */
+/*  🟢 Estilos para la galería dinámica _________________________________________________ */
+    /* Galería */
+    .galeria {
+      padding: 20px;
+      text-align: center;
+  }
+
+  .contenedor-galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      padding: 20px;
+  }
+
+  .elemento-galeria {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+      position: relative;
+      cursor: pointer;
+  }
+
+  .elemento-galeria:hover {
+      transform: scale(1.1) rotate(1deg);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+
+  .elemento-galeria img {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      display: block;
+      transition: filter 0.3s ease;
+  }
+
+  .elemento-galeria img:hover {
+      filter: brightness(1.2) contrast(1.1);
+  }
+
+  .elemento-galeria figcaption {
+      padding: 10px;
+      font-size: 0.9em;
+      color: #555;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      color: #fff;
+      opacity: 0;
+      transform: translateY(100%);
+      transition: opacity 0.3s, transform 0.3s;
+  }
+
+  .elemento-galeria:hover figcaption {
+      opacity: 1;
+      transform: translateY(0);
+  }
+
+  /* Modal */
+.modal {
+  display: none; /* Ocultar el modal por defecto */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Fondo oscuro semitransparente */
+  justify-content: center;
+  align-items: center; /* Centra el contenido */
+  backdrop-filter: blur(10px); /* Efecto de fondo borroso */
+  opacity: 0; /* Inicia como invisible */
+  transition: opacity 0.3s ease-in-out; /* Transición para la opacidad */
+}
+
+.modal.mostrar {
+  opacity: 1; /* Hacer visible el modal */
+}
+
+.modal-contenido {
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  animation: aparecer 0.3s ease-in-out; /* Animación de entrada */
+}
+
+.cerrar {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  color: white;
+  font-size: 80px;
+  cursor: pointer;
+  z-index: 1001;
+  transition: transform 0.2s;
+}
+
+.cerrar:hover {
+  transform: scale(1.2); /* Aumenta ligeramente el tamaño al pasar el cursor */
+}
+
+/* Animación de la imagen al aparecer */
+@keyframes aparecer {
+  0% {
+      transform: scale(0.8);
+      opacity: 0;
+  }
+  100% {
+      transform: scale(1);
+      opacity: 1;
+  }
+}
